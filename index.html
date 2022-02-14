@@ -73,31 +73,57 @@
 
       .two-column-grid {
         display: grid;
+        grid-template-columns: 1fr 1fr;
       }
 
-      .box1 {
+      /* .two-column-grid .box {
+        display: grid;
+        grid-auto-flow: column;
+      } */
+
+      .two-column-grid .left {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+      }
+
+      .two-column-grid .right {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+
+      .extension {
+        display: grid;
+        grid-template-columns: 60px 1fr 150px; 
+      }
+
+      .extension .box {
+        display: grid;
+        grid-auto-flow: column; 
+      }
+/* 
+      .two-column-grid .box1 .inner-box1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 5px;
-      }
+        gap: 5px;}
+        
+        
+        .two-column-grid .box2 .inner-box2 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 5px;
+        }
 
-      .box2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5px;
-      }
-
-      .inner-box1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 5px;
-      }
+        .inner-box1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+          }      
 
       .inner-box2 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         gap: 5px;
-      }
+      } */
 
       /* Grid within Grid Section */
       /* Practice re-using classes */
@@ -146,33 +172,33 @@
     <div>
       <h2>Grid within Grid #1</h2>
       <div class="container two-column-grid">
-        <div class="box1">
-          <div class="inner-box1"></div>
-          <div class="inner-box1"></div>
-          <div class="inner-box1"></div>
+        <div class="box left">
+          <div class="inner-box"></div>
+          <div class="inner-box"></div>
+          <div class="inner-box"></div>
         </div>
-        <div class="box2">
-          <div class="inner-box2"></div>
-          <div class="inner-box2"></div>
-          <div class="inner-box2"></div>
-          <div class="inner-box2"></div>
-          <div class="inner-box2"></div>
+        <div class="box right">
+          <div class="inner-box"></div>
+          <div class="inner-box"></div>
+          <div class="inner-box"></div>
+          <div class="inner-box"></div>
+          <div class="inner-box"></div>
         </div>
       </div>
     </div>
     <div>
       <h2>Grid within Grid #2 (Expansion)</h2>
-      <div class="container">
-        <div class="box1">
-          <div class="inner-box1"></div>
+      <div class="container extension">
+        <div class="box">
+          <div class="inner-box"></div>
         </div>
         <div class="box expand">
           <div class="inner-box width-sm"></div>
         </div>
-        <div class="box2">
-          <div class="inner-box2"></div>
-          <div class="inner-box2"></div>
-          <div class="inner-box2"></div>
+        <div class="box">
+          <div class="inner-box"></div>
+          <div class="inner-box"></div>
+          <div class="inner-box"></div>
         </div>
       </div>
     </div>
